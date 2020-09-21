@@ -8,9 +8,12 @@ class Todo(models.Model):
     completed = models.BooleanField(default=False)
     
     
+    class Meta:
+	    ordering = ['-created_at']
+     
+    
     def __str__(self):
         return self.title
     
     
-    class Meta:
-	    ordering = ['-created_at']
+    

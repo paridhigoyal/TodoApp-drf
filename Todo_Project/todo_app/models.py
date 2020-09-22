@@ -1,19 +1,15 @@
 from django.db import models
 
+
 # Create your models here.
 class Todo(models.Model):
     title = models.CharField(max_length=200)
     details = models.TextField()
     created_at = models.DateTimeField(auto_now=True)
     completed = models.BooleanField(default=False)
-    
-    
+
     class Meta:
-	    ordering = ['-created_at']
-     
-    
+        ordering = ['-created_at']
+
     def __str__(self):
         return self.title
-    
-    
-    

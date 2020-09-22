@@ -28,8 +28,6 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,8 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'todo_app',
-    
+    'todo_app'
 ]
 
 MIDDLEWARE = [
@@ -77,14 +74,12 @@ WSGI_APPLICATION = 'Todo_Project.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default':
-         {
+    'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'todo_db',
         'USER': 'root',
         'PASSWORD': 'root',
     }
-    
 }
 
 # Password validation
